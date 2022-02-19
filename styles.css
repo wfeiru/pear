@@ -1,0 +1,60 @@
+body {
+    padding: 5px;
+    font-family: 'Comfortaa', Monospace, serif;
+    font-size: 22px;
+    color: #233030;
+    background-color: #ffe5b4
+}
+
+h1 {
+    font-family: 'Comfortaa', Monospace, serif;
+    font-size: 16px;
+}
+
+h2 {
+    font-family: 'Comfortaa', Monospace, serif;
+    font-size: 70px;
+}
+
+address {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: thin dotted;
+}
+
+.navbar {
+    overflow: hidden;
+    padding: 20px;
+    text-align: right;
+}
+
+.navbar li {
+    background: white;
+    margin: 0.5em 0;
+    padding: 0.3em;
+    border-right: 1em solid black
+}
+
+.navbar a {
+    font-weight: bold;
+    text-transform: lowercase;
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 17px;
+    border: 3px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 15px;
+    margin-left: 10px;
+}
+
+a:link {
+    color: #233030
+}
+
+a:visited {
+    color: #233030
+}

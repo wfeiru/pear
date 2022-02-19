@@ -3,10 +3,13 @@
 
     <head>
         <title>Pear — Pair Building</title>
-    
-        <!--CSS -->
-        <link rel="stylesheet" href="styles.css">
+
+        <script type="text/javascript" src="/data/bases.js"></script>
+
+        <!--Bulma Requirements -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     </head>
 
     <body>
@@ -16,16 +19,20 @@
                     Home
                 </a>
                 
-                <a href="/menu/matches.html" class="navbar-item">
+                <a href="/pages/matches.html" class="navbar-item">
                     Matches
                 </a>
     
-                <a href="/menu/friends.html" class="navbar-item">
+                <a href="/pages/friends.html" class="navbar-item">
                     Friends
                 </a>
     
-                <a href="/menu/profile.html" class="navbar-item">
-                    Profile
+                <a href="/pages/register.html" class="navbar-item">
+                    Register
+                </a>
+
+                <a href="/pages/login.html" class="navbar-item">
+                    Sign In
                 </a>
     
             </div>
@@ -34,9 +41,11 @@
         <section class="section">
             <div class="container">
                 <h1 class="title">Create Your Profile</h1>
-                <ol>
-                    <li><a>w3schools</a> - One of the most comprehensive HTML & CSS guides</li>
-                </ol>
+               
+                <!--name-->
+                Name: <input type="text" id="name" value="First Last">
+                <button type="button" onclick="setName()">Submit</button>
+
             </div>
         </section>
     

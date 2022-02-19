@@ -1,1 +1,0 @@
-const car = {name:"Jane", number:"0", color:"white"};

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pearl Hacks - Introduction to Web Dev</title>
+
+    <!--Bulma Requirements -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style>
+        .slide {
+            height: 100vh;
+            line-height: 2;
+        }
+
+        .slide ul {
+            list-style-type: circle;
+            margin-left: 1.5rem;
+
+        }
+
+        .code {
+            font-family: "Consolas";
+            background-color: #eeeeee;
+            padding: 2px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-start">
+            <a href="/index.html" class="navbar-item">
+                Intro to Web Dev
+            </a>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    Part 1 - HTML
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a href="/Part_1/notes_1.html#11" class="navbar-item">
+                        1.1 Notes
+                    </a>
+                    <a href="/Part_1/notes_1.html#12" class="navbar-item">
+                        1.2 Notes
+                    </a>
+                    <a href="/Part_1/exercise_1.3.html" class="navbar-item" target="new">
+                        1.3 Exercise
+                    </a>
+                    <a href="/Part_1/finished_1.3.html" class="navbar-item" target="new">
+                        Finished Exercise
+                    </a>
+                </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    Part 2 - CSS
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a href="/Part_2/notes_2.html#21" class="navbar-item">
+                        2.1 Notes
+                    </a>
+                    <a href="/Part_2/notes_2.html#22" class="navbar-item">
+                        2.2 Notes
+                    </a>
+                    <a href="/Part_2/exercise_2.3.html" class="navbar-item" target="new">
+                        2.3 Exercise
+                    </a>
+                    <a href="/Part_2/finished_2.3.html" class="navbar-item" target="new">
+                        Finished Exercise
+                    </a>
+                </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    Part 3 - Bulma
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a href="/Part_3/notes_3.html#31" class="navbar-item">
+                        3.1 Notes
+                    </a>
+                    <a href="/Part_3/notes_3.html#32" class="navbar-item">
+                        3.2 Notes
+                    </a>
+                    <a href="/Part_3/exercise_3.3.html" class="navbar-item" target="new">
+                        3.3 Exercise
+                    </a>
+                    <a href="/Part_3/finished_3.3.html" class="navbar-item" target="new">
+                        Finished Exercise
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="hero is-large is-info is-bold">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title">
+                    Part 2 - CSS
+                </h1>
+                <h2 class="subtitle">
+                    In this part of the workshop, you will learn what CSS is and how to apply your own CSS styles. </h2>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container slide">
+            <h1 class="title" id="21">2.1 - CSS Basics</h1>
+            <ul class="is-size-5">
+                <li>HTML defines what content is on a page, <strong>Cascading Style Sheets (CSS)
+                    </strong>define how it appears</li>
+                <li>General syntax:
+                    <span class='code'><br>selector {
+                        <br> &emsp;&emsp; attributeName: attributeValue;
+                        <br>}</span>
+                </li>
+                <li>Ex:
+                    <span class='code'><br>body {
+                        <br> &emsp;&emsp; background-color: pink;
+                        <br>}</span>
+                </li>
+                <li>Selector is often a tag name, such as body or button</li>
+                <li>Styles are applied in the order in which they are assigned and by how specific they are;
+                    read more at
+                    <a href="http://www.w3schools.com/css" rel="noopener noreferrer"
+                        target="_blank">www.w3schools.com/css</a>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <div class="container slide" style="line-height: 1.6;">
+            <h1 class="title" id="22">2.2 - Classes, External Stylesheets</h1>
+            <ul class='is-size-5'>
+                <li>If we want to apply styles more generally, we can assign <strong>class names</strong> to tags, and
+                    use the class as a selector instead
+                    <ul>
+                        <li>Ex:
+                            <span class='code'>
+                                <br>&lt;p class="center"&gt;A centered paragraph&lt;/p&gt;
+                                <br>&lt;h1 class="center"&gt;A Centered Heading&lt;/h1&gt;
+                                <br>…
+                                <br>.center {
+                                <br>&emsp;&emsp; text-align: center;
+                                <br>}
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+                <li>Best practice is to put styles in a <strong>.css file</strong> and link to it using <span
+                        class='code'>&lt;link&gt;</span>
+                    inside the <span class='code'>&lt;head&gt;</span> of your webpage
+                    <ul>
+                        <li>Ex:
+                            <span class='code'>
+                                <br>&lt;head&gt;
+                                <br>&emsp;&emsp; …
+                                <br>&emsp;&emsp; &lt;link rel="stylesheet" href="styles.css"&gt;
+                                <br> &lt;/head&gt;
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <div class="container slide">
+            <h1 class="title" id="13">2.3 - Adding to Code</h1>
+            <ul class='is-size-5'>
+                <li>
+                    Your goal is to make <a href='/Part_2/exercise_2.3.html' target='new'>this page</a> look like <a
+                        href='/Part_2/finished_2.3.html' target='new'>this page</a> by adding the necessary CSS.
+                </li>
+                <li>
+                    Some CSS attributes you might need include...
+                    <ul>
+                        <li><span class='code'>background-color</span></li>
+                        <li><span class='code'>color</span></li>
+                        <li><span class='code'>font-size</span></li>
+                        <li><span class='code'>font-family</span></li>
+                        <li><span class='code'>text-align</span></li>
+                        <li><span class='code'>width</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                This page was created for Pearl Hacks 2020's "Introduction to Web Development"
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pearl Hacks - Introduction to Web Dev</title>
+
+    <!--Bulma Requirements -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style>
+        .slide {
+            min-height: 100vh;
+            line-height: 2.5;
+        }
+
+        .slide ul {
+            list-style-type: circle;
+            margin-left: 1.5rem;
+
+        }
+
+        .code {
+            font-family: "Consolas";
+            background-color: #eeeeee;
+            padding: 2px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-start">
+            <a href="/index.html" class="navbar-item">
+                Intro to Web Dev
+            </a>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    Part 1 - HTML
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a href="/Part_1/notes_1.html#11" class="navbar-item">
+                        1.1 Notes
+                    </a>
+                    <a href="/Part_1/notes_1.html#12" class="navbar-item">
+                        1.2 Notes
+                    </a>
+                    <a href="/Part_1/exercise_1.3.html" class="navbar-item" target="new">
+                        1.3 Exercise
+                    </a>
+                    <a href="/Part_1/finished_1.3.html" class="navbar-item" target="new">
+                        Finished Exercise
+                    </a>
+                </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    Part 2 - CSS
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a href="/Part_2/notes_2.html#21" class="navbar-item">
+                        2.1 Notes
+                    </a>
+                    <a href="/Part_2/notes_2.html#22" class="navbar-item">
+                        2.2 Notes
+                    </a>
+                    <a href="/Part_2/exercise_2.3.html" class="navbar-item" target="new">
+                        2.3 Exercise
+                    </a>
+                    <a href="/Part_2/finished_2.3.html" class="navbar-item" target="new">
+                        Finished Exercise
+                    </a>
+                </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    Part 3 - Bulma
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a href="/Part_3/notes_3.html#31" class="navbar-item">
+                        3.1 Notes
+                    </a>
+                    <a href="/Part_3/notes_3.html#32" class="navbar-item">
+                        3.2 Notes
+                    </a>
+                    <a href="/Part_3/exercise_3.3.html" class="navbar-item" target="new">
+                        3.3 Exercise
+                    </a>
+                    <a href="/Part_3/finished_3.3.html" class="navbar-item" target="new">
+                        Finished Exercise
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <section class="hero is-large is-info is-bold">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title">
+                    Part 1 - HTML
+                </h1>
+                <h2 class="subtitle">
+                    In this part of the workshop, you will learn what HTML is and how HTML is structured. </h2>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container slide">
+            <h1 class="title" id="11">1.1 - HTML Notes</h1>
+            <ul class='is-size-5'>
+                <li>
+                    All webpages are written in <b>HyperText Markup Language (HTML)</b>
+                    <ul>
+                        <li>
+                            Either <b>dynamically</b> produced or <b>statically</b> written ahead of time
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    HTML consists of content enclosed in nested, predefined tags
+                    <ul>
+                        <li>
+                            Tags define the structure and role of content
+                        <li>
+                            Ex: <span class="code">&#60;p&#62;Hi there&#60;/p&#62;</span> tells the browser that “Hi
+                            there” is a paragraph
+                        </li>
+                </li>
+            </ul>
+            </li>
+            <li>
+                No one is expected to know every tag
+                <ul>
+                    <li>
+                        Learn a handful of the most common tags, lookup others as you go
+                    </li>
+                    <li>
+                        <a href="https://www.w3schools.com/tags" target="blank">www.w3schools.com/tags</a>
+                    </li>
+                </ul>
+            </li>
+            </ul>
+        </div>
+        <hr>
+        <div class="container slide">
+            <h1 class="title" id="12">1.2 - Basic HTML File Structure</h1>
+            <ul class='is-size-5'>
+                <li><span class='code'>&lt;!DOCTYPE html&gt;</span>: Tells browser we are using HTML5; a void, empty tag
+                    (no closing tag, no content)</li>
+                <li><span class='code'>&lt;html&gt;</span>: Starts HTML content
+                    <ul>
+                        <li><span class='code'>&lt;head&gt;</span>: Defines “web page settings”
+                            <ul>
+                                <li><span class='code'>&lt;title&gt;</span>: Page title, as seen on browser tab
+                                </li>
+                                <li><span class='code'>&lt;link&gt;</span>: Links to other, non-HTML resources we may
+                                    need in this page</li>
+                            </ul>
+                        </li>
+                        <li><span class='code'>&lt;body&gt;</span>: Starts page content
+                            <ul>
+                                <li><span class='code'>&lt;nav&gt;</span>: General container for any “navigation
+                                    content” </li>
+                                <li><span class='code'>&lt;section&gt;</span>: General container for a “section” of
+                                    content
+                                </li>
+                                <li><span class='code'>&lt;footer&gt;</span>: General container for “footer” content
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <div class="container slide">
+            <h1 class="title" id="13">1.3 - Adding to Code</h1>
+            <ul class='is-size-5'>
+                <li>
+                    Your goal is to make <a href='/Part_1/exercise_1.3.html' target='blank'>this page</a> look like <a href='/Part_1/finished_1.3.html' target='blank'>this page</a> by adding the necessary HTML
+                    elements.
+                </li>
+                <li>
+                    Some elements you might need include...
+                    <ul>
+                        <li><span class='code'>&lt;div&gt;</span> - Generic container
+                            <ul>
+                                <li><span class='code'>&lt;main&gt;</span>, <span class='code'>&lt;section&gt;</span>,
+                                    <span class='code'>&lt;footer&gt;</span>, etc. are variants of
+                                    <span class='code'>&lt;div&gt;</span></li>
+                            </ul>
+                        </li>
+                        <li><span class='code'>&lt;a href=””&gt;</span> - Hyperlinks</li>
+                        <li><span class='code'>&lt;p&gt;</span> - Paragraphs </li>
+                        <li><span class='code'>&lt;img src=””&gt;</span> - Image</li>
+                        <li><span class='code'>&lt;ol&gt;</span> - Numbered list</li>
+                        <li><span class='code'>&lt;li&gt;</span> - Item in a list</li>
+                        <li><span class='code'>&lt;h1&gt;, &lt;h2&gt;, …</span> - Headings</li>
+                        <li><span class='code'>&lt;button&gt;</span> - Generic button</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                This page was created for Pearl Hacks 2020's "Introduction to Web Development"
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

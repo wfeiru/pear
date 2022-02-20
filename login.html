@@ -4,7 +4,7 @@
 <head>
     <title>Pear — Pair Building</title>
 
-    <script type="text/javascript" src="/data/bases.js"></script>
+    <script type="text/javascript" src='data/bases.js'></script>
 
     <!--CSS -->
     <link rel="icon" href=images/pierot.gif>
@@ -37,15 +37,23 @@
     </nav>
 
     <section class="section">
-        <h1 ">Welcome Back!</h1>
+        <h1>Welcome Back!</h1>
 
         <div class="container ">
             Email: <input type="text " id="username ">
             <br>
-            <br> Password: <input type="text " id="pw ">
+            <br>
+            Password: <input type="text " id="pw ">
             <br>
             <br>
-            <button onclick="setCurrent() ">Submit</button>
+            <button id="welcome">Submit</button>
+            <script>
+                document.getElementById("welcome").onclick = function() {
+                    let login = document.getElementById("username ").value;
+                    let pw = document.getElementById("pw ").value;
+                    setCurrent(login, pw);
+                };
+            </script>
         </div>
     </section>
 

@@ -4,6 +4,8 @@
 <head>
     <title>Pear — Pair Building</title>
 
+    <script type="text/javascript" src='data/bases.js'></script>
+
     <!--CSS -->
     <link rel="icon" href=images/pierot.gif>
     <link rel="stylesheet" href="styles.css">
@@ -39,35 +41,50 @@
             Your Matches
         </h1>
 
-        <button onclick="findMatches()">Find Matches</button>
+        <button id="find">Find Matches</button>
         <br>
         <br>
 
         <div class="grid-container">
             <div class="grid-item">
                 <img class="profile" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png">
-                <p>Name</p>
+                <p id="match0"></p>
             </div>
             <div class="grid-item">
                 <img class="profile" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png">
-                <p>Name</p>
+                <p id="match1"></p>
             </div>
             <div class="grid-item">
                 <img class="profile" src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'>
-                <p>Name</p>
+                <p id="match2"></p>
             </div>
             <div class="grid-item">
                 <img class="profile" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png">
-                <p>Name</p>
+                <p id="match3"></p>
             </div>
             <div class="grid-item">
                 <img class="profile" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png">
-                <p>Name</p>
+                <p id="match4"></p>
             </div>
             <div class="grid-item">
                 <img class="profile" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png">
-                <p>Name</p>
+                <p id="match5"></p>
             </div>
+
+            <script>
+                document.getElementById("find").onclick = function() {
+                    findMatches();
+                    let current = getCurrent();
+                    document.write("current.matches_list[0]");
+                    document.getElementById("match0").innerHTML = current.matches_list[0].name;
+                    document.getElementById("match1").innerHTML = current.matches_list[1].name;
+                    document.getElementById("match2").innerHTML = current.matches_list[2].name;
+                    document.getElementById("match3").innerHTML = current.matches_list[3].name;
+                    document.getElementById("match4").innerHTML = current.matches_list[4].name;
+                    document.getElementById("match5").innerHTML = current.matches_list[5].name;
+                    alert("Get connecting!")
+                };
+            </script>
 
         </div>
 

@@ -1,35 +1,69 @@
-const user = {
-    name: "Jane Doe", 
-    id: 0, 
-    phone: 9197412772, 
-    email: "jane@gmail.com", 
-    password: "password",
-    blurb: "Hello, world!",
-    project_list: [],
-    matches_list: [],
-    friend_list: [],
-    tags_is: [],
-    tags_looking: []
-};
+class User {
+    constructor(name, phone, email, password, blurb, tags_is, tags_looking) {
+        this.name = name;
+        this.id = 0;
+        this.phone = phone;
+        this.email = email;
+        this.password = password;
+        this.blurb = blurb;
+        this.proj_list = [];
+        this.matches_list = [];
+        this.tags_is = tags_is;
+        this.tags_looking = tags_looking;
+    };
 
-const project = {
-    name: "p00", 
-    id: 0, 
-    blurb: "This is my project.",
-    tags: []
+    /**
+     * @param {number} num
+     */
+    set id_num(num) {
+        this.id = num;
+    }
+}
+
+class Project {
+    constructor(name, blurb, tags) {
+        this.name = name;
+        this.id = 0;
+        this.blurb = blurb;
+        this.tags = tags;
+    }
 };
 
 const user_base = {
     id_num: 0, 
-    array: []
+    arr: []
 };
 
 const proj_base = {
     id_num: 0,
-    array: []
+    arr: []
 };
 
-function setName() {
-    let x = document.getElementById("name").value;
-    user.name = x;
+function setUser() {
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let blurb = document.getElementById("blurb").value;
+    const is = [document.getElementById("is0").value, document.getElementById("is1").value, document.getElementById("is2").value, document.getElementById("is3").value, document.getElementById("is4").value];
+    const looking = [document.getElementById("looking0").value, document.getElementById("looking1").value, document.getElementById("looking2").value, document.getElementById("looking3").value, document.getElementById("looking4").value];
+    let newbie = new User(name, phone, email, password, blurb, is, looking);
+    newbie.id_num(user_base.id_num);
+    user_base.id_num++;
+    user_base.arr.push(newbie);
+}
+
+let currentUser = -1;
+
+function setCurrent() {
+    let login = document.getElementById("username").value;
+    let pw = document.getElementById("pw").value;
+    for(a in arr){
+        if(a.email == login && a.password == pw) {
+            currentUser = a.id;
+        }
+    }
+    if (currentUser == -1) {
+        alert("Incorrect username or password.")
+    }
 }

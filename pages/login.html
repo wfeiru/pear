@@ -2,7 +2,9 @@
 <html>
 
 <head>
-    <title>Pear — Pair Building</title>
+    <title>Pearity — Pair Building</title>
+
+    <script type="text/javascript" src="/data/bases.js"></script>
 
     <!--CSS -->
     <link rel="stylesheet" href="styles.css">
@@ -21,10 +23,6 @@
                     Matches
                 </a>
 
-            <a href="/pages/friends.html" class="navbar-item">
-                    Friends
-                </a>
-
             <a href="/pages/register.html" class="navbar-item">
                     Register
                 </a>
@@ -38,16 +36,17 @@
 
     <section class="section">
         <div class="container">
-            <h1 class="title">Sign In</h1>
-            <ol>
-                <li><a>w3schools</a> - One of the most comprehensive HTML & CSS guides</li>
-            </ol>
+            Email: <input type="text" id="username">
+            <br>
+            <br> Password: <input type="text" id="pw">
+            <br>
+            <br>
+            <button onclick="setCurrent()">Submit</button>
         </div>
     </section>
 
     <footer class="footer">
         <div class="content has-text-centered">
-            <img src=../images/pierot.gif alt="Friendly workplace" style="width: 100px;height: auto; float: right; padding: 4em;" />
             <p>
                 This page was created for Pearl Hacks 2022 by The Rotten Pears.
             </p>

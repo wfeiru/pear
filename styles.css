@@ -119,3 +119,19 @@ img.profile {
     width: 100px;
     height: auto;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #ffe5b4;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ffe5b4;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 22px;
+    text-align: center;
+}

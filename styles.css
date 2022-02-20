@@ -13,9 +13,10 @@ select {
 }
 
 button {
+    width: 100%;
     background-color: #e6b192;
     color: #233030;
-    padding: 5px;
+    padding: 30px;
     font-size: 22px;
     font-family: 'Comfortaa', Monospace, serif;
     border-radius: 14px;
@@ -107,6 +108,7 @@ div.desc {
 }
 
 input {
+    width: 100%;
     border: 2px solid #233030;
     border-radius: 4px;
     padding: 8px 20px;

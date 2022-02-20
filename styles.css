@@ -86,34 +86,6 @@ a:visited {
     color: #233030
 }
 
-figure {
-    display: inline-block;
-}
-
-figcaption {
-    display: inline-block;
-}
-
-div.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
-    width: 180px;
-}
-
-div.gallery:hover {
-    border: 1px solid #777;
-}
-
-div.gallery img {
-    width: 100%;
-    height: auto;
-}
-
-div.desc {
-    padding: 15px;
-    text-align: center;
-}
-
 input {
     width: 95%;
     border: 3px solid #233030;
@@ -143,5 +115,23 @@ img.profile {
     border-radius: 50px;
     padding: 10px;
     font-size: 22px;
+    text-align: center;
+}
+
+footer {
+    text-align: justify;
+    padding-top: 10em;
+}
+
+img.pierot {
+    position: fixed;
+    bottom: 0px;
+    left: 80%;
+    width: 150px;
+    height: auto;
+    float: right;
+}
+
+div.has-text-centered {
     text-align: center;
 }

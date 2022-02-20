@@ -3,11 +3,23 @@ body {
     font-family: 'Comfortaa', Monospace, serif;
     font-size: 22px;
     color: #233030;
-    background-color: #ffe5b4
+    background-color: #ffe5b4;
 }
 
 select {
+    padding: 5px;
     font-size: 22px;
+    font-family: 'Comfortaa', Monospace, serif;
+}
+
+button {
+    background-color: #e6b192;
+    color: #233030;
+    padding: 5px;
+    font-size: 22px;
+    font-family: 'Comfortaa', Monospace, serif;
+    border-radius: 14px;
+    padding: 15px;
 }
 
 h1 {
@@ -46,6 +58,7 @@ hr {
     text-transform: lowercase;
     float: right;
     color: #233030;
+    background-color: #e6b192;
     text-align: center;
     padding: 5px;
     text-decoration: none;
@@ -131,12 +144,12 @@ div.desc {
 }
 
 input {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid red;
+    border: 2px solid #233030;
     border-radius: 4px;
+    padding: 8px 20px;
+    margin: 8px 0;
+    font-family: 'Comfortaa', Monospace, serif;
+    font-size: 22px;
 }
 
 div.container {

@@ -30,7 +30,6 @@ const proj_base = {
 };
 
 function setName() {
-    document.write("name added");
     let x = document.getElementById("name").value;
     user.name = x;
 }

@@ -118,6 +118,7 @@ input {
 img.profile {
     width: 100px;
     height: auto;
+    border-radius: 50px;
 }
 
 .grid-container {
@@ -128,9 +129,9 @@ img.profile {
 }
 
 .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid #ffe5b4;
-    border-radius: 4px;
+    background-color: #e6b192;
+    border: 30px solid #ffe5b4;
+    border-radius: 50px;
     padding: 10px;
     font-size: 22px;
     text-align: center;

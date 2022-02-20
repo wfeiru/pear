@@ -42,11 +42,21 @@
         <div class="container ">
             Email: <input type="text " id="username ">
             <br>
+            <br> Password: <input type="text " id="pw ">
             <br>
-            Password: <input type="text " id="pw ">
             <br>
-            <br>
-            <button id="welcome">Submit</button>
+
+            <div class="grid-container">
+                <div class="grid-item" style="background-color: #ffe5b4">
+                    <p></p>
+                </div>
+                <div class="grid-item" style="background-color: #ffe5b4">
+                    <button id="welcome">Submit</button>
+                </div>
+                <div class="grid-item" style="background-color: #ffe5b4">
+                </div>
+            </div>
+
             <script>
                 document.getElementById("welcome").onclick = function() {
                     let login = document.getElementById("username ").value;
@@ -58,8 +68,8 @@
     </section>
 
     <footer class="footer ">
-        <div class="content has-text-centered ">
-            <img src=images/pierot.gif alt="Friendly workplace " style="width: 100px;height: auto; float: right; padding: 4em; " />
+        <div class="has-text-centered ">
+            <img class="pierot" src=images/pierot.gif alt="pierot" />
             <p>
                 This page was created for Pearl Hacks 2022 by The Rotten Pears.
             </p>

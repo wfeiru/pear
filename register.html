@@ -223,19 +223,32 @@
             <br>
             <br>
             <br>
-            <button id="button" class="float-left submit-button">Submit</button>
-            <script type="text/javascript">
-                document.getElementById("button").onclick = function() {
-                    setUser();
-                    location.href = "https://wfeiru.github.io/pear/login.html"
-                };
-            </script>
+
+            <div class="grid-container">
+                <div class="grid-item" style="background-color: #ffe5b4">
+                    <p></p>
+                </div>
+                <div class="grid-item" style="background-color: #ffe5b4">
+                    <button id="button" class="float-left submit-button">Submit</button>
+                    <script type="text/javascript">
+                        document.getElementById("button").onclick = function() {
+                            setUser();
+                            location.href = "https://wfeiru.github.io/pear/login.html"
+                        };
+                    </script>
+
+                </div>
+                <div class="grid-item" style="background-color: #ffe5b4">
+                </div>
+            </div>
+
+
         </div>
     </section>
 
     <footer class="footer">
-        <div class="content has-text-centered">
-            <img src=images/pierot.gif alt="Friendly workplace" style="width: 100px;height: auto; float: right; padding: 4em;" />
+        <div class="has-text-centered">
+            <img class="pierot" src=images/pierot.gif alt="pierot" />
             <p>
                 This page was created for Pearl Hacks 2022 by The Rotten Pears.
             </p>

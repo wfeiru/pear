@@ -31,12 +31,12 @@ class Project {
 
 const user_base = {
     id_num: 0, 
-    array: []
+    arr: []
 };
 
 const proj_base = {
     id_num: 0,
-    array: []
+    arr: []
 };
 
 function setUser() {
@@ -50,7 +50,20 @@ function setUser() {
     let newbie = new User(name, phone, email, password, blurb, is, looking);
     newbie.id_num(user_base.id_num);
     user_base.id_num++;
-    user_base.array.push(newbie);
+    user_base.arr.push(newbie);
 }
 
-var currentUser;
+let currentUser = -1;
+
+function setCurrent() {
+    let login = document.getElementById("username").value;
+    let pw = document.getElementById("pw").value;
+    for(a in arr){
+        if(a.email == login && a.password == pw) {
+            currentUser = a.id;
+        }
+    }
+    if (currentUser == -1) {
+        alert("Incorrect username or password.")
+    }
+}

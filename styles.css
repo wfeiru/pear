@@ -87,18 +87,17 @@ figcaption {
 }
 
 .container {
-    margin: 20px auto;
     width: 400px;
-    height: 400px;
+    height: auto;
     display: grid;
-    grid-template-columns: 200px 200px;
-    grid-row: auto auto;
+    grid-template-columns: 33% 33% 33%;
+    grid-row: auto auto auto;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
 }
 
 .box {
-    background-color: #333;
+    background-color: white;
     padding: 20px;
     border-radius: 10px;
     color: #fff;
@@ -107,6 +106,10 @@ figcaption {
     justify-content: center;
     font-size: 40px;
     font-family: sans-serif;
+    border: 3px;
+    border-style: solid;
+    border-color: #233030;
+    border-radius: 15px;
 }
 
 div.gallery {
@@ -138,6 +141,7 @@ input {
     font-size: 22px;
 }
 
-div.container {
-    padding: 3em;
+img.profile {
+    width: 100px;
+    height: auto;
 }

@@ -6,7 +6,7 @@ const user = {
     password: "password",
     blurb: "Hello, world!",
     project_list: [],
-    matche_list: [],
+    matches_list: [],
     friend_list: [],
     tags_is: [],
     tags_looking: []
@@ -30,7 +30,7 @@ const proj_base = {
 };
 
 function setName() {
+    document.write("name added");
     let x = document.getElementById("name").value;
     user.name = x;
-    document.write("name added");
 }

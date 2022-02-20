@@ -20,7 +20,7 @@ class User {
 
 }
 
-const user_base = {
+var user_base = {
     id_num: 23, 
     arr: [
         new User("Pearot", 0, 9193498009, "pearrot@email.com", "pw0", "hi", ["backend","frontend","fullstack","designer","manager"], []),
@@ -42,10 +42,10 @@ const user_base = {
         new User("Cindy", 16, 9193498009, "jnnie@email.com", "pw16", "hi", ["backend","c","fullstack","designer","manager"], ["backend","frontend","fullstack","designer","c"]),
         new User("Pansy", 17, 9193498009, "knnie@email.com", "pw17", "hi", ["backend","frontend","fullstack","designer","manager"], ["backend","anything","c","designer","manager"]),
         new User("Bull", 18, 9193498009, "lnnie@email.com", "pw18", "hi", ["backend","frontend","fullstack","designer","manager"], ["backend","frontend","fullstack","designer","manager"]),
-        new User("Sydney", 19, 9193498009, "mnnie@email.com", "pw19", "hi", ["backend","frontend","fullstack","designer","manager"], ["c","frontend","fullstack","designer","manager"]),
-        new User("Ruth", 20, 9193498009, "nnnie@email.com", "pw20", "hi", ["backend","frontend","javascript","designer","anything"], ["backend","frontend","fullstack","java","manager"]),
-        new User("Lili", 21, 9193498009, "onnie@email.com", "pw21", "hi", ["backend","anything","fullstack","designer","manager"], ["backend","frontend","fullstack","designer","manager"]),
-        new User("Ruiyi", 22, 9193498009, "pnnie@email.com", "pw22", "hi", ["backend","frontend","fullstack","anything","manager"], ["backend","frontend","c","javascript","java"]),
+        new User("Bear", 19, 9193498009, "mnnie@email.com", "pw19", "hi", ["backend","frontend","fullstack","designer","manager"], ["c","frontend","fullstack","designer","manager"]),
+        new User("Bubby", 20, 9193498009, "nnnie@email.com", "pw20", "hi", ["backend","frontend","javascript","designer","anything"], ["backend","frontend","fullstack","java","manager"]),
+        new User("Luv", 21, 9193498009, "onnie@email.com", "pw21", "hi", ["backend","anything","fullstack","designer","manager"], ["backend","frontend","fullstack","designer","manager"]),
+        new User("Ann", 22, 9193498009, "pnnie@email.com", "pw22", "hi", ["backend","frontend","fullstack","anything","manager"], ["backend","frontend","c","javascript","java"]),
         new User("Pearl", 23, 9193498009, "pppp@email.com", "pw23", "hi", ["backend","frontend","fullstack","designer","manager"], ["javascript","c","fullstack","designer","manager"]),
     ]
 };
@@ -60,11 +60,12 @@ function setUser() {
     const looking = [document.getElementById("looking0").value, document.getElementById("looking1").value, document.getElementById("looking2").value, document.getElementById("looking3").value, document.getElementById("looking4").value];
     let num = user_base.id_num;
     user_base.id_num++;
-    let newbie = new User(name, num, phone, email, password, blurb, is, looking);
-    user_base.arr.push(newbie);
+    user_base.arr.push(new User(name, num, phone, email, password, blurb, is, looking));
 }
 
 function setCurrent(login, pw) {
+    //unable to access user_base?
+    localStorage.clear();
     for (let i = 0; i < user_base.id_num; i++) {
         if(user_base.arr[i].email == login && user_base.arr[i].password == pw) {
             currentUser = user_base.arr[i];
@@ -79,32 +80,11 @@ function setCurrent(login, pw) {
 }
 
 function getCurrent() {
-    localStorage.getItem("current");
     return JSON.parse(window.localStorage.getItem("current"));
 }
 
 function findMatches() {
     currentUser = getCurrent();
-    let other = Math.floor(Math.random() * user_base.id_num);
-    
-    if (user_base.arr[other] != currentUser) {
-        //iterate through other's skills
-        let j = 0;
-        let stop = false;
-        while (j < 5 && stop == false) {
-            //iterate through wants skills
-            let k = 0;
-            while (k < 5 && stop == false) {
-                if (user_base.arr[other].is[j] == currentUser.looking[k] || currentUser.looking[k] == "anything") {
-                    currentUser.matches_list.push(user_base.arr[other]);
-                    matched++;
-                    stop = true;
-                }
-                k++;
-            }
-            j++;
-        }
-    }
     //iterate through users
     let i = 0;
     let matched = 0;

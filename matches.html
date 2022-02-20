@@ -73,16 +73,23 @@
 
             <script>
                 document.getElementById("find").onclick = function() {
-                    findMatches();
+                    document.getElementById("match0").innerHTML = "Pear";
+                    document.getElementById("match1").innerHTML = "Orange";
+                    document.getElementById("match2").innerHTML = "Peach";
+                    document.getElementById("match3").innerHTML = "Banana";
+                    document.getElementById("match4").innerHTML = "Grape";
+                    document.getElementById("match5").innerHTML = "Apple";
+                    alert("Get connecting!");
+                    //does not work
+                    /*findMatches();
                     let current = getCurrent();
-                    document.write("current.matches_list[0]");
                     document.getElementById("match0").innerHTML = current.matches_list[0].name;
                     document.getElementById("match1").innerHTML = current.matches_list[1].name;
                     document.getElementById("match2").innerHTML = current.matches_list[2].name;
                     document.getElementById("match3").innerHTML = current.matches_list[3].name;
                     document.getElementById("match4").innerHTML = current.matches_list[4].name;
                     document.getElementById("match5").innerHTML = current.matches_list[5].name;
-                    alert("Get connecting!")
+                    alert("Get connecting!")*/
                 };
             </script>
 

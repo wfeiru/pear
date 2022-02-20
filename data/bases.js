@@ -1,3 +1,6 @@
+var currentUser;
+var currentID = -1;
+
 class User {
     constructor(name, phone, email, password, blurb, tags_is, tags_looking) {
         this.name = name;
@@ -53,17 +56,41 @@ function setUser() {
     user_base.arr.push(newbie);
 }
 
-let currentUser = -1;
-
 function setCurrent() {
     let login = document.getElementById("username").value;
     let pw = document.getElementById("pw").value;
     for(a in arr){
         if(a.email == login && a.password == pw) {
-            currentUser = a.id;
+            currentUser = a;
+            currentID = a.id;
         }
     }
-    if (currentUser == -1) {
+    if (currentID == -1) {
         alert("Incorrect username or password.")
     }
+}
+
+function findMatches() {
+    //iterate through users
+    let i = 0;
+    let matched = 0;
+    while (i < arr.len && matched <= 6) {
+        //iterate through other's skills
+        let j = 0;
+        let stop = false;
+        while (j < 5 && stop == false) {
+            //iterate through wants skills
+            let k = 0;
+            while (k < 5 && stop == false) {
+                if (arr[i].is[j] == currentUser.looking[k]) {
+                    currentUser.matches_list.add(arr[i]);
+                    matched++;
+                    stop = true;
+                }
+                k++;
+            }
+            j++;
+        }
+    }
+    i++;
 }

@@ -13,11 +13,13 @@ select {
 }
 
 button {
+    text-transform: lowercase;
+    font-weight: bold;
     width: 15em;
     background-color: #e6b192;
     color: #233030;
     padding: 30px;
-    font-size: 22px;
+    font-size: 30px;
     font-family: 'Comfortaa', Monospace, serif;
     border-radius: 14px;
     padding: 15px;
@@ -26,18 +28,20 @@ button {
 h1 {
     background-color: #e6b192;
     font-family: 'Comfortaa', Monospace, serif;
-    font-size: 50px;
+    font-size: 70px;
     text-align: center;
     border: 3px;
     border-style: solid;
     border-color: black;
     border-radius: 15px;
     padding: .5em;
+    text-transform: lowercase;
 }
 
 h2 {
     font-family: 'Comfortaa', Monospace, serif;
     font-size: 90px;
+    text-transform: lowercase;
 }
 
 hr {
